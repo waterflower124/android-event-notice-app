@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#80CBC4</color>
+
+    <color name="gray">#888888</color>
+    <color name="mine_shaft">#303030</color>
+    <color name="sulu">#BAF25C</color>
+    <color name="sunset_orange">#FF4A4A</color>
+    <color name="gallery">#ECECEC</color>
+    <color name="supernova">#FFC700</color>
+    <color name="persian_green">#009688</color>
+    <color name="blue_ribbon">#1472FF</color>
+    <color name="ecstasy">#F66D12</color>
+
+    <color name="bg_menu_select">#802CC4CB</color>
+    <drawable name="bg_menu_select">#802CC4CB</drawable>
+
+    <color name="bg_alert">@color/sunset_orange</color>
+    <color name="bg_moving">@color/sulu</color>
+    <color name="bg_stopped">@color/gallery</color>
+    <color name="bg_idle">@color/supernova</color>
+
+    <color name="signin_background">#110F0D</color>
+    <color name="titlebar_background">#0BA1A5</color>
+    <color name="statusbar_background">#2B3C4E</color>
+
+    <color name="spinner_dropdown_header">#ECECEC</color>
+
+    <color name="red_color">#FF0000</color>
+    <color name="connecting_animation_color">#303030</color>
+
+    <color name="marker_label_color">#020091</color>
+
+    <color name="more_asset_info">#1472FF</color>
+
+</resources>

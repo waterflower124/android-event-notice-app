@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="16dp"
+    android:paddingEnd="16dp"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <LinearLayout
+        android:id="@+id/iconLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            tools:background="@drawable/bg_asset_alert"
+            android:scaleType="center"
+            tools:srcCompat="@drawable/ic_asset_car" />
+    </LinearLayout>
+
+<!--    <ToggleButton-->
+<!--        android:id="@+id/fav"-->
+<!--        android:layout_width="14dp"-->
+<!--        android:layout_height="14dp"-->
+<!--        android:layout_toRightOf="@+id/icon"-->
+<!--        android:layout_marginLeft="-8dp"-->
+<!--        android:background="@drawable/bg_like_toggle"-->
+<!--        android:focusable="false"-->
+<!--        android:focusableInTouchMode="false"-->
+<!--        android:textOff=""-->
+<!--        android:textOn="" />-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_toRightOf="@id/iconLayout"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            tools:text="WA873C"
+            android:fontFamily="@font/robotocondensed_bold"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="9sp"
+            android:textColor="@android:color/black"
+            tools:text="Jalan PJU 1A/2, Ara Damansara, 47301 Petaling Jaya, Selan"
+            android:fontFamily="@font/robotocondensed_regular"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ECECEC" />
+    </LinearLayout>
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/monitor"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:buttonTint="@android:color/black"-->
+<!--        android:text=""/>-->
+    <RelativeLayout
+        android:id="@+id/alertcountLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:paddingLeft="16dp">
+        <ImageView
+            android:id="@+id/alertImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_notification_black_24px" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/alertImageView"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginStart="-10dp"
+            android:background="@drawable/bg_asset_alert">
+            <TextView
+                android:id="@+id/alertcountTextView"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:text="12"
+                android:textSize="8dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

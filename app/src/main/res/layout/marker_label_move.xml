@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/markerImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_marker_move"
+        android:layout_marginLeft="@dimen/marker_left_margin"
+        android:layout_marginStart="@dimen/marker_left_margin" />
+
+    <TextView
+        android:id="@+id/asset_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:text="NGTTEST-920"
+        android:fontFamily="@font/roboto_medium"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="1.5"
+        android:shadowDy="0"
+        android:shadowRadius="1.5"
+        android:textAllCaps="true"
+        android:textColor="@color/marker_label_color"/>
+
+</LinearLayout>

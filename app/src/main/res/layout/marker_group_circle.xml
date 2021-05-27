@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/marker_integrateLayout"
+    android:layout_width="@dimen/marker_group_radius"
+    android:layout_height="@dimen/marker_group_radius"
+    android:orientation="vertical"
+    android:background="@drawable/bg_marker_group"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/marker_integrate_countTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="4"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>
+

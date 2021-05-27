@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/webview_popup_item_refresh"
+        android:title="REFRESH"
+        android:visible="true"/>
+    <item
+        android:id="@+id/webview_popup_item_browser"
+        android:title="OPEN IN BROWSER"
+        android:visible="false"/>
+</menu>

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "787016143065",
+    "firebase_url": "https://ngt-mobile-57e5c.firebaseio.com",
+    "project_id": "ngt-mobile-57e5c",
+    "storage_bucket": "ngt-mobile-57e5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787016143065:android:b5384ea4a10b7e7d",
+        "android_client_info": {
+          "package_name": "com.netglue.ngtmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787016143065-faf59cl414mtskss22ocsu1u31u39e34.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.netglue.ngtmobile",
+            "certificate_hash": "e6119b48b940cad8d72ebe632e9c11e1a7f2e412"
+          }
+        },
+        {
+          "client_id": "787016143065-dvoplprh58qh3eq11rsvcst23c237bel.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.netglue.ngtmobile",
+            "certificate_hash": "3dcfe387160787940cd61d49f8f35fd4b69e8ec2"
+          }
+        },
+        {
+          "client_id": "787016143065-vnh5idkunvjjfbcluj491it8oe4e2r5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnt6oH0Fi_QPM_MTzqanj_0n4SaixFeeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787016143065-vnh5idkunvjjfbcluj491it8oe4e2r5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

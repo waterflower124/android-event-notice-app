@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RouteActivity">
+
+
+<!--
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+-->
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/motion_markerLayout"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bg_border_marker_motion_label"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/markerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23:23 888kmph"
+            android:textSize="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/gray"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_round_white"
+        app:srcCompat="@drawable/ic_arrow_back_black_24px"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_round_semi_mine_shaft"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="-20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_above="@+id/trip_info"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        tools:text="17/02/2019"/>
+
+    <include
+        layout="@layout/item_trip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="-4dp"
+        android:layout_alignParentBottom="true"/>
+
+    <ToggleButton
+        android:id="@+id/play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/date"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/bg_play_toggle"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textOff=""
+        android:textOn="" />
+
+</RelativeLayout>

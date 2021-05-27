@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="3dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:background="@drawable/bg_round_gray">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textScaleX="0.9"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Last Alert"
+            android:fontFamily="@font/robotocondensed_bold"/>
+
+        <TextView
+            android:id="@+id/item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textScaleX="0.9"
+            android:textSize="15sp"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            tools:text="Panic Trigger"
+            android:fontFamily="@font/robotocondensed_bold"/>
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="8sp"
+            android:textColor="@android:color/black"
+            android:text=" "
+            tools:text="2019-05-15, 7:30 PM"
+            android:fontFamily="@font/robotocondensed_light"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

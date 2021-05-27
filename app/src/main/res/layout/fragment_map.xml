@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MapFragment"
+    android:id="@+id/map_fragment">
+
+    <LinearLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_border_round_gray"
+            android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_border_round_white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        app:srcCompat="@drawable/ic_search_black_24px" />
+
+                    <EditText
+                        android:id="@+id/keyword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:hint="Search Here"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColorHint="#888888"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/roboto_light"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/connect_list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/connection_lost"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/red_color"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <Spinner
+                android:id="@+id/searchfilterSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_spinner"
+                android:popupBackground="#ECECEC"
+                android:dropDownVerticalOffset="45dp"
+                android:dropDownWidth="130dp" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp">
+            <RelativeLayout
+                android:id="@+id/connecting_bar_increase_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/connecting_animation_color"
+                android:visibility="visible"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp">
+            <ToggleButton
+                android:id="@+id/traffic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_map_setting_toggle"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textOff=""
+                android:textOn=""/>
+            <LinearLayout
+                android:id="@+id/mapSettingLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_map_setting"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                android:gravity="center_vertical"
+                android:paddingRight="40dp"
+                android:paddingLeft="20dp">
+
+                <ToggleButton
+                    android:id="@+id/maplabelToggle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/bg_maplabel_toggle"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textOff=""
+                    android:textOn=""
+                    android:checked="true"/>
+                <ToggleButton
+                    android:id="@+id/maptrafficToggle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/bg_maptraffic_toggle"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textOff=""
+                    android:textOn=""/>
+                <ToggleButton
+                    android:id="@+id/mapsateliteToggle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/bg_mapsatelite_toggle"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:textOff=""
+                    android:textOn=""/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchresult_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:background="@android:color/white"
+        android:visibility="invisible">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchResultRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/item_asset_data"
+            tools:itemCount="3">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginTop="9dp"
+        android:visibility="invisible">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/close"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="right"-->
+<!--            app:srcCompat="@drawable/ic_cancel_red_24px" />-->
+
+        <RelativeLayout
+            android:id="@+id/label_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_top_round_mine_shaft"
+            android:paddingTop="8dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
+
+            <TextView
+                android:id="@+id/asset_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/speed_layout"
+                android:layout_marginRight="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                tools:text="WWB9823"
+                android:fontFamily="@font/robotocondensed_bold"/>
+
+            <LinearLayout
+                android:id="@+id/speed_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/asset_speed"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="2dp"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    tools:text="25"-->
+<!--                    android:fontFamily="@font/robotocondensed_bold"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:text="km/h"-->
+<!--                    android:fontFamily="@font/robotocondensed_light"/>-->
+                <ImageView
+                    android:id="@+id/googlemapImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_asset_googlemap"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
+                <ImageView
+                    android:id="@+id/shareImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_asset_share"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/asset_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/asset_name"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                tools:text="Ali Bakar"
+                android:fontFamily="@font/robotocondensed_light"/>
+
+            <TextView
+                android:id="@+id/asset_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/asset_user"
+                android:textScaleX="0.9"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                tools:text="Lorong Tikus, Jalan Bendahara 1335 A, 4610 Petaling Jaya, Selangor Darul Ehsan, Malaysia."
+                android:fontFamily="@font/robotocondensed_light"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:background="@color/sulu">
+
+            <TextView
+                android:id="@+id/asset_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                tools:text="Moving"
+                android:fontFamily="@font/robotocondensed_bold"/>
+
+            <ToggleButton
+                android:id="@+id/toggle_visible"
+                android:layout_width="20dp"
+                android:layout_height="10dp"
+                android:layout_centerInParent="true"
+                style="?android:attr/borderlessButtonStyle"
+                android:padding="12dp"
+                android:background="@drawable/bg_visible_toggle"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textOff=""
+                android:textOn="" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="8sp"
+                    android:textColor="@android:color/black"
+                    android:text="Last Reported:"
+                    android:fontFamily="@font/robotocondensed_light"/>
+
+                <TextView
+                    android:id="@+id/asset_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/black"
+                    tools:text="2019-05-20, 12:50 PM"
+                    android:fontFamily="@font/robotocondensed_light"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMaxWidth="0dp"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabTextColor="@android:color/black"
+                app:tabSelectedTextColor="@android:color/black"
+                app:tabTextAppearance="@style/tab_text"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

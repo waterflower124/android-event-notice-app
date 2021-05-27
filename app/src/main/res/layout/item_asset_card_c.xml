@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_round_gray"
+        android:layout_margin="3dp"
+        android:paddingTop="9dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingBottom="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Empty layout (0x0 dp) centered horizontally -->
+            <Space android:id="@+id/dummy"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                android:id="@+id/text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@+id/dummy">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textScaleX="0.9"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="Fuel"
+                    android:fontFamily="@font/robotocondensed_bold"/>
+
+                <TextView
+                    android:id="@+id/item1_caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textScaleX="0.9"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/black"
+                    android:text="Amount"
+                    android:fontFamily="@font/robotocondensed_light"/>
+
+                <TextView
+                    android:id="@+id/item1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textScaleX="0.9"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:textColor="#00BB00"
+                    tools:text="75.0 L"
+                    android:fontFamily="@font/robotocondensed_bold"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/dummy"
+                android:layout_alignTop="@+id/text_layout"
+                android:layout_alignBottom="@+id/text_layout">
+
+                <at.grabner.circleprogress.CircleProgressView
+                    android:id="@+id/seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    app:cpv_barWidth="10dp"
+                    app:cpv_barColor="#00BB00"
+                    app:cpv_rimWidth="10dp"
+                    app:cpv_rimColor="@android:color/white"
+                    app:cpv_showUnit="false"
+                    app:cpv_textColor="@android:color/transparent"
+                    app:cpv_innerContourSize="0dp"
+                    app:cpv_outerContourSize="0dp"
+                    app:cpv_value="10"
+                    />
+
+                <TextView
+                    android:id="@+id/item2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:textScaleX="0.9"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="75%"
+                    android:fontFamily="@font/robotocondensed_light"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="8sp"
+            android:textColor="@android:color/black"
+            android:text=" "
+            tools:text="2019-05-15, 7:30 PM"
+            android:fontFamily="@font/robotocondensed_light"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

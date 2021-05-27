@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/asset_name"
+    android:text="NGTTEST-920"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:fontFamily="@font/roboto_medium"
+    android:textColor="@color/marker_label_color"/>
